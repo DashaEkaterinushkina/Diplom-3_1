@@ -3,8 +3,8 @@ import io.restassured.response.ValidatableResponse;
 
 public class User extends Config {
     @Step("Создание пользователя")
-    public ValidatableResponse createUser(String json) {
-        return RequestSpecification(json)
+    public void createUser(String json) {
+        RequestSpecification(json)
                 .post(USER_CREATE)
                 .then();
     }
