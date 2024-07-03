@@ -7,7 +7,7 @@ public class LoginTest extends BaseTest {
     @DisplayName("Проверка входа с главной страницы")
     @Test
     public void checkAuthenticationMainPageTest(){
-        users.getAccessToken(json, users);
+        users.createUser(json);
         entrance.clickLoginMainPage();
         entrance.inputEmailPassword(email,password);
         entrance.clickCome();
@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
     @DisplayName("Проверка входа через Личный кабинет")
     @Test
     public void checkAuthenticationTest(){
-        users.getAccessToken(json, users);
+        users.createUser(json);
         entrance.clickPrivateOffice();
         entrance.inputEmailPassword(email,password);
         entrance.clickCome();
@@ -29,7 +29,7 @@ public class LoginTest extends BaseTest {
     @DisplayName("Проверка входа через форму регистрации")
     @Test
     public void checkAuthenticationAfterRegister(){
-        users.getAccessToken(json, users);
+        users.createUser(json);
         entrance.clickPrivateOffice();
         entrance.clickRegisterButton();
         entrance.clickLoginRegistrationPage();
@@ -43,7 +43,7 @@ public class LoginTest extends BaseTest {
     @DisplayName("Проверка входа через кнопку в форме восстановления пароля")
     @Test
     public void checkAuthenticationRestorationPassword(){
-        users.getAccessToken(json, users);
+        users.createUser(json);
         entrance.clickPrivateOffice();
 
         entrance.clickRestorationPassword();

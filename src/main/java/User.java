@@ -17,17 +17,10 @@ public class User extends Config {
     }
 
     @Step("Удаление пользователя")
-    public ValidatableResponse delete(String token,String json) {
-        return RequestSpecification(json)
+    public void delete(String token,String json) {
+         RequestSpecification(json)
                 .auth().oauth2(token)
                 .delete(USER_DELETE)
                 .then();
-    }
-    @Step("Получение токена")
-    public String getAccessToken(String json, User users) {
-        new User().createUser(json)
-                .statusCode(200);
-        return users.login(json)
-                .extract().body().path("accessToken");
     }
 }

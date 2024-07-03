@@ -6,7 +6,7 @@ public class TransitionTest extends BaseTest {
     @DisplayName("Проверка перехода по клику на Личный кабинет")
     @Test
     public void checkTransitionPrivateOfficeTest() {
-        users.getAccessToken(json, users);
+        users.createUser(json);
         entrance.clickLoginMainPage();
         entrance.inputEmailPassword(email, password);
         entrance.clickCome();
@@ -18,7 +18,7 @@ public class TransitionTest extends BaseTest {
     @DisplayName("Проверь переход из Личного кабинета по клику на Конструктор")
     @Test
     public void checkTransitionConstructor() {
-        users.getAccessToken(json, users);
+        users.createUser(json);
         entrance.clickLoginMainPage();
         entrance.inputEmailPassword(email, password);
         entrance.clickCome();
@@ -32,7 +32,7 @@ public class TransitionTest extends BaseTest {
     @DisplayName("Проверь переход из Личного кабинета по клику на логотип Stellar Burgers")
     @Test
     public void checkTransitionLogotypeText() {
-        users.getAccessToken(json, users);
+        users.createUser(json);
         entrance.clickLoginMainPage();
         entrance.inputEmailPassword(email, password);
         entrance.clickCome();
@@ -46,7 +46,7 @@ public class TransitionTest extends BaseTest {
     @DisplayName("Проверка выхода по кнопке Выйти в личном кабинете")
     @Test
     public void checkExitTest() {
-        users.getAccessToken(json, users);
+        users.createUser(json);
         entrance.clickLoginMainPage();
         entrance.inputEmailPassword(email, password);
         entrance.clickCome();
